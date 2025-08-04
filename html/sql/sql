@@ -1,0 +1,18 @@
+DROP TABLE collection.images;
+CREATE TABLE collection.images(
+	id int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	filename varchar(255) NOT NULL UNIQUE,
+	count int NOT NULL DEFAULT 0,
+	likes int NOT NULL DEFAULT 0,
+	display boolean DEFAULT true
+);
+
+show columns FROM collection.images;
+
+INSERT INTO images (filename) VALUES ('sample.jpeg');
+
+SELECT filename FROM images ORDER BY count ASC;
+
+ALTER DATABASE collection CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+
+UPDATE images SET count = count + 1;

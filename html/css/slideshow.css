@@ -1,0 +1,55 @@
+body{
+	text-align: center;
+	background-color: #000000;
+	color: white;
+}
+.image_box{
+	z-index: 0;
+	position: relative;
+	display: inline-block;
+	text-align: left;
+	border: solid #000000;
+	border-radius: 10px;
+}
+.image_box img{
+  border-radius: 0px;
+}
+.button{
+	z-index: 1;
+	position: absolute;
+}
+.button input{
+	position: relative;
+  background-color: white;
+  opacity: 0.2;
+}
+@media screen and (min-width: 481px){
+	img{
+		width: auto;
+		height: 100vh;
+	}
+	.button{
+		top: 5%;
+		left: 80%;
+	}
+	.button input{
+		width: 30px;
+		height: 30px;
+		border-radius: 30px;
+	}
+}
+@media screen and (max-width: 480px){
+	img{
+		width: 100%;
+		height: auto;
+	}
+	.button{
+		top: 85%;
+		left: 85%;
+	}
+	.button input{
+		width: 50px;
+		height: 50px;
+		border-radius: 50px;
+	}
+}
